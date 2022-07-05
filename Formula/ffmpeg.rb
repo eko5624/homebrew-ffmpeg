@@ -15,7 +15,7 @@ class Ffmpeg < Formula
   option "with-jack", "Enable Jack support"
   option "with-libmodplug", "Enable module/tracker files as inputs via libmodplug"
   option "with-libopenmpt", "Enable module/tracker files as inputs via libopenmpt"
-  option "with-libjxl", "Enable jpeg-xl"
+  option "with-jpeg-xl", "Enable jpeg-xl"
   option "with-librist", "Enable Reliable Internet Stream Transport (RIST) support"
   option "with-librsvg", "Enable SVG files as inputs via librsvg"
   option "with-libsoxr", "Enable the soxr resample library"
@@ -64,7 +64,7 @@ class Ffmpeg < Formula
   depends_on "libbs2b" => :optional
   depends_on "libcaca" => :optional
   depends_on "libgsm" => :optional
-  depends_on "libjxl" => :optional
+  depends_on "jpeg-xl" => :optional
   depends_on "libmodplug" => :optional
   depends_on "libopenmpt" => :optional
   depends_on "librist" => :optional
@@ -138,7 +138,7 @@ class Ffmpeg < Formula
     args << "--enable-libfdk-aac" if build.with? "fdk-aac"
     args << "--enable-libgme" if build.with? "game-music-emu"
     args << "--enable-libgsm" if build.with? "libgsm"
-    args << "--enable-libjxl" if build.with? "libjxl"
+    args << "--enable-libjxl" if build.with? "jpeg-xl"
     args << "--enable-libmodplug" if build.with? "libmodplug"
     args << "--enable-libopenh264" if build.with? "openh264"
     args << "--enable-libopenjpeg" if build.with? "openjpeg"
