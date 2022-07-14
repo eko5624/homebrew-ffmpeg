@@ -59,7 +59,7 @@ class Jxl < Formula
 
   def install
     # remove when https://github.com/libjxl/libjxl/commit/88fe3fff3dc70c72405f57c69feffd9823930034 is in a tag
-    inreplace "lib/jxl.cmake", "if({LINKER_SUPPORT_EXCLUDE_LIBS})", "if(${LINKER_SUPPORT_EXCLUDE_LIBS})"
+    # inreplace "lib/jxl.cmake", "if({LINKER_SUPPORT_EXCLUDE_LIBS})", "if(${LINKER_SUPPORT_EXCLUDE_LIBS})"
     resources.each { |r| r.stage buildpath/"third_party"/r.name }
     mkdir "build" do
       # disable manpages due to problems with asciidoc 10
