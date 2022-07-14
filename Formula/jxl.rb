@@ -57,13 +57,9 @@ class Jxl < Formula
         revision: "64374756e03700d649f897dbd98c95e78c30c7da"
   end
 
-  # remove when https://github.com/libjxl/libjxl/commit/88fe3fff3dc70c72405f57c69feffd9823930034 is in a tag
-  patch do
-    url "https://github.com/libjxl/libjxl/commit/88fe3fff3dc70c72405f57c69feffd9823930034.patch"
-    sha256 "78b545a42f1ed95538922b0a8db77cd6b4a2231d062d0d8d6a450c070318b96b"
-  end
-
   def install
+    # remove when https://github.com/libjxl/libjxl/commit/88fe3fff3dc70c72405f57c69feffd9823930034 is in a tag
+    inreplace "lib/jxl.cmake", "if({LINKER_SUPPORT_EXCLUDE_LIBS})", "if(${LINKER_SUPPORT_EXCLUDE_LIBS})"
     resources.each { |r| r.stage buildpath/"third_party"/r.name }
     mkdir "build" do
       # disable manpages due to problems with asciidoc 10
