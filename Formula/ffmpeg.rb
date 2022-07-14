@@ -46,7 +46,7 @@ class Ffmpeg < Formula
   depends_on "frei0r"
   depends_on "lame"
   depends_on "libass"
-  depends_on "eko5624/tap/libjxl"
+  depends_on "eko5624/ffmpeg/libjxl"
   depends_on "libvorbis"
   depends_on "libvpx"
   depends_on "opus"
@@ -105,7 +105,6 @@ class Ffmpeg < Formula
       --host-cflags=#{ENV.cflags}
       --host-ldflags=#{ENV.ldflags}
       --enable-gpl
-      --enable-libaom
       --enable-libdav1d
       --enable-libmp3lame
       --enable-libopus
