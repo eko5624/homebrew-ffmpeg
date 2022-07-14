@@ -60,7 +60,7 @@ class Jxl < Formula
   # remove when https://github.com/libjxl/libjxl/commit/88fe3fff3dc70c72405f57c69feffd9823930034 is in a tag
   patch do
     url "https://github.com/libjxl/libjxl/commit/88fe3fff3dc70c72405f57c69feffd9823930034.patch"
-    sha256 "962806e33b0479f53eb4a89bc83464dc8a87ade92f32817d9320428a7677c557"
+    sha256 "78b545a42f1ed95538922b0a8db77cd6b4a2231d062d0d8d6a450c070318b96b"
   end
 
   def install
