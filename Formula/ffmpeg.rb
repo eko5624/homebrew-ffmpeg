@@ -39,14 +39,14 @@ class Ffmpeg < Formula
   depends_on "nasm" => :build
   depends_on "pkg-config" => :build
 
-  depends_on "aom"
+  #depends_on "aom"
   depends_on "dav1d"
   depends_on "fontconfig"
   depends_on "freetype"
   depends_on "frei0r"
   depends_on "lame"
   depends_on "libass"
-  depends_on "libjxl"
+  depends_on "eko5624/tap/libjxl"
   depends_on "libvorbis"
   depends_on "libvpx"
   depends_on "opus"
