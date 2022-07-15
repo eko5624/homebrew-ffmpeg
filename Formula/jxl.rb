@@ -1,4 +1,4 @@
-class JpegXl < Formula
+class Jxl < Formula
   desc "New file format for still image compression"
   homepage "https://jpeg.org/jpegxl/index.html"
   url "https://github.com/libjxl/libjxl/archive/v0.6.1.tar.gz"
